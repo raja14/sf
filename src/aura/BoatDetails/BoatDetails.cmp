@@ -1,0 +1,30 @@
+<!--
+ - Created by rvivek on 3/3/2018.
+ -->
+
+<aura:component description="BoatDetails" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId">
+    <aura:handler event="c:BoatSelected" action="{!c.onBoatSelected}"/>
+    <aura:handler name="boatReviewAdded" event="c:BoatReviewAdded" action="{!c.onBoatReviewAdded}"/>
+    <aura:attribute name="Id" type="Id" access="public"/>
+    <aura:attribute name="boat" type="Boat__c" access="public"/>
+    <aura:attribute name="selectedTabId" type="String" access="public"/>
+    <force:recordData aura:id="service"
+                      recordId="{!v.Id}"
+                      fields="Id,Name,Description__c,Price__c,Length__c,Contact__r.Name,Contact__r.Email,Contact__r.HomePhone,BoatType__r.Name,Picture__c"
+                      targetFields="{!v.boat}"
+                      recordUpdated="{!c.onRecordUpdated}"
+    />
+    <aura:if isTrue="{!!empty(v.boat)}">
+    <lightning:tabset variant="scoped" selectedTabId="{!v.selectedTabId}" aura:id="alltabs">
+        <lightning:tab label="Details" id="details" >
+            <c:BoatDetail boat="{!v.boat}"/>
+        </lightning:tab>
+        <lightning:tab label="Reviews" id="reviews">
+         <c:BoatReviews boat="{!v.boat}" aura:id="boatReview"/>
+        </lightning:tab>
+        <lightning:tab label="Add Review" id="boatreviewtab" >
+            <c:AddBoatReview boat="{!v.boat}"/>
+        </lightning:tab>
+    </lightning:tabset>
+    </aura:if>
+</aura:component>

@@ -1,0 +1,10 @@
+#Mapping values
+#Sat Feb 24 17:36:26 EST 2018
+Mailing\ Country=MailingCountry
+Full\ Name=LastName
+Mailing\ Street=MailingStreet
+Mailing\ State/Province=MailingState
+Phone=Phone
+Mailing\ City=MailingCity
+Email=Email
+Mailing\ Zip/Postal\ Code=MailingPostalCode

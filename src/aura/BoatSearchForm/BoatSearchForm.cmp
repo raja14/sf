@@ -1,0 +1,30 @@
+<!--
+ - Created by rvivek on 2/27/2018.
+ -->
+
+<aura:component description="BoatSearchForm" controller="BoatTypeController">
+    <aura:attribute name="isRecordCreateEnabled" type="Boolean" default="false"/>
+    <aura:attribute name="boatTypes" type="BoatType__c[]" />
+    <aura:attribute name="selectedBoatType" type="String" />
+    <aura:registerEvent name="formsubmit" type="c:FormSubmit"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" access="global"/>
+    <form>
+    <lightning:layout horizontalAlign="center" verticalAlign="end">
+        <lightning:layoutItem >
+           <lightning:select name="boatTypeDD"  label="All Types" aura:id="boatTypeDD" onchange="{!c.handleChange}">
+               <option value="">All Types</option>
+               <aura:iteration var="option" items="{! v.boatTypes }">
+                   <option value="{! option.Id }">{! option.Name }</option>
+                   </aura:iteration>
+           </lightning:select>
+        </lightning:layoutItem>
+        &nbsp;&nbsp;&nbsp;
+        <lightning:layoutItem >
+            <lightning:button label="Search" variant="brand" class="slds-button_brand" onclick="{!c.onFormSubmit}"/>
+            <aura:if isTrue="{!v.isRecordCreateEnabled}">
+            <lightning:button label="New" variant="neutral" class="slds-button_neutral" onclick="{!c.createNewBoat}"/>
+            </aura:if>
+        </lightning:layoutItem>
+    </lightning:layout>
+        </form>
+</aura:component>

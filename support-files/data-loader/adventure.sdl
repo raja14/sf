@@ -1,0 +1,19 @@
+#Mapping values
+#Sat Feb 24 17:31:35 EST 2018
+Adventure\ Name=Name
+Needs\ Insurance=Needs_Insurance__c
+Adventure\ Code=ProductCode
+Day\ Trip=Day_Trip__c
+Adventure\ Rating=Adventure_Rating__c
+Active\ (Adventure)=IsActive
+Needs\ Waiver=Needs_Waiver__c
+Porters=Porters__c
+Adventure\ Description=Description
+Expedition\ Leader=Expedition_Leader__c
+Duration\ (Nights)=Duration_Nights__c
+Shore\ Dive=Shore_Dive__c
+Permits\ Needed=Permits_Needed__c
+Minimum\ Age=Minimum_Age__c
+Country=Country__c
+Duration\ (Days)=Duration_Days__c
+List\ Price=List_Price__c

@@ -1,0 +1,21 @@
+/**
+ * Created by rvivek on 3/3/2018.
+ */
+.THIS {
+}
+
+.THIS.label {
+    font-weight: bold;
+    display: block;
+}
+
+.THIS.boatproperty {
+    margin-bottom: 3px;
+}
+
+.THIS.imageview {
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 200px;
+    margin: 2px;
+}

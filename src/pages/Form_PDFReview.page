@@ -1,0 +1,4 @@
+<apex:page controller="Form_PDFReviewController" showheader="false" id="p1" sidebar="false"  applyBodyTag="false" renderAs="pdf">
+    <apex:stylesheet value="{!URLFOR($Resource.Form_Review_Pdf_View_Vf,'Form_Review_Pdf_View_Vf.css')}" /> 
+    <apex:dynamicComponent componentValue="{!vFComponents}"/>
+</apex:page>

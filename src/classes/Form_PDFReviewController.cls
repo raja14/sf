@@ -1,13 +1,3 @@
-/*
-Copyright © 2017 Fannie Mae. All rights reserved.
-This software contains confidential information and trade secrets of Fannie Mae. Use, disclosure, or reproduction is prohibited without the prior written consent of Fannie Mae.
-*/
-/********************************************************************************************
- * Author         : Venkat pacharla 
- * Description    : This class builds the Form 582 Review Page as Dynamic Visual force page
- * Date           : 1/18/2018
- * *****************************************************************************************/
-
 public with sharing class Form_PDFReviewController {
     
     Form_SectionDTOs.FieldSetMetaObjectResponseWrapper fieldSetMetaObjectResponse;
